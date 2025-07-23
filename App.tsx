@@ -5,6 +5,7 @@ import Modal from './components/Modal';
 import Card from './components/Card';
 import { useCsvData } from './hooks/useCsvData';
 import { useTagGroupSelection } from './hooks/useTagGroupSelection';
+import csvUrl from './data/danbooru_tag_data_rated.csv?url';
 
 // --- ICONS (defined outside component to prevent re-creation) ---
 const SearchIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -61,7 +62,7 @@ const useAnimatedScore = (targetScore: number, duration = 600) => {
 // --- Main Application Component ---
 const App: React.FC = () => {
   const [mode, setMode] = useState<AppMode>('random');
-  const { allTags, isLoading, error } = useCsvData('/data/danbooru_tag_data_rated.csv');
+  const { allTags, isLoading, error } = useCsvData(csvUrl);
   
   const tagGroups = useMemo(() => {
     if (allTags.length === 0) return [];
