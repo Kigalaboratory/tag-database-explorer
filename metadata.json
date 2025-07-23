@@ -1,0 +1,6 @@
+{
+  "name": "Tag Database Explorer",
+  "description": "An application to search for tags or play a random tag game to score points.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
