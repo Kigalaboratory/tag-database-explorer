@@ -69,7 +69,10 @@ const Card: React.FC<CardProps> = ({ card, onClick, revealed }) => {
             <>
               <div>
                 <div className="flex justify-between items-start">
-                  <h3 className={`text-xl font-bold ${style.title}`}>{tagData.trans}</h3>
+                  <div>
+                    <h3 className={`text-xl font-bold ${style.title}`}>{tagData.trans}</h3>
+                    <p className={`text-sm ${style.title} opacity-80`}>{tagData.tag} ({tagData.jpTag})</p>
+                  </div>
                   <div className={`text-lg font-bold ${style.title}`}>+{score}</div>
                 </div>
                 <p className="text-xs text-slate-300">{tagData.tagGroup.join(', ')}</p>
