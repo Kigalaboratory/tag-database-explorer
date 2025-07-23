@@ -175,6 +175,7 @@ const SearchMode: React.FC<{ allTags: TagData[]; tagGroups: string[] }> = ({ all
                     <thead className="bg-slate-700/50">
                         <tr>
                             <th className="p-4 font-semibold text-sm text-slate-300">trans</th>
+                            <th className="p-4 font-semibold text-sm text-slate-300">jpTag</th>
                             <th className="p-4 font-semibold text-sm text-slate-300">tag</th>
                             <th className="p-4 font-semibold text-sm text-slate-300">tagGroup</th>
                             <th className="p-4 font-semibold text-sm text-slate-300">Rating</th>
@@ -185,6 +186,7 @@ const SearchMode: React.FC<{ allTags: TagData[]; tagGroups: string[] }> = ({ all
                         {filteredTags.slice(0, 100).map((tag, index) => (
                             <tr key={index} className="border-b border-slate-700 hover:bg-slate-800">
                                 <td className="p-4 font-medium">{tag.trans}</td>
+                                <td className="p-4 font-medium">{tag.jpTag}</td>
                                 <td className="p-4 text-slate-400">{tag.tag}</td>
                                 <td className="p-4 text-slate-400">{tag.tagGroup.join(', ')}</td>
                                 <td className="p-4 text-slate-400">{tag.rating}</td>
